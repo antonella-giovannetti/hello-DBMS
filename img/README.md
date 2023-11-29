@@ -35,7 +35,7 @@ Ce concept apparaît après la naissance d’Hadoop en 2006 et a pour principe d
 
 Avec l’apparition du Serverless amené par les CSPs (Cloud Service Providers) est né un nouveau type d’architecture : le data lakehouse. Les analyses sont maintenant faisables sans gérer les infrastructures sous-jacentes. Les problématiques de gestion des serveurs sont mises de côté. Ici, l’idée est de stocker les données dans du stockage distribué (Amazon S3, Azure Blob Storage, Google Cloud Storage) et d’effectuer les analyses avec des infrastructures gérées par les CSPs (Amazon Athena, Amazon EMR, Databricks, Azure HDInsight, Google Dataproc).
 
-![schema data warehouse/ data lake/ data lakehouse](img/data-lakehouse-new.png)
+![schema data warehouse/ data lake/ data lakehouse](data-lakehouse-new.png)
 
 #### D. Donnez une définition et des exemples de systèmes de gestion de bases de données avec des illustrations.
 
@@ -62,7 +62,7 @@ Imaginons par exemple qu'un détaillant crée une table de tous ses produits. Da
 
 Les tables suivantes illustrent cette approche.
 
-![relational database example](img/data_saving.png)
+![relational database example](data_saving.png)
 
 **Comment les bases de données non relationnelles stockent-elles les données ?**
 
@@ -74,7 +74,7 @@ Bases de données clé-valeur
 
 Une base de données clé-valeur stocke les données sous la forme d'un ensemble de paires clé-valeur. Dans une paire, la clé sert d'identifiant unique. Les clés et les valeurs peuvent se présenter sous toutes les formes, des objets simples aux objets composés complexes. 
 
-![no relational database example with key value](img/bdd_key-value.png)
+![no relational database example with key value](bdd_key-value.png)
 
 
 Bases de données document
@@ -83,7 +83,7 @@ Les bases de données orientées documents ont le même format de modèle de doc
 
 L'exemple suivant montre à quoi peuvent ressembler les données stockées dans une base de données document.
 
-![no relational database document example](img/bdd_document.png)
+![no relational database document example](bdd_document.png)
 
 Bases de données graphiques
 
@@ -91,7 +91,7 @@ Les bases de données orientées graphe sont conçues pour stocker et rechercher
 
 Un arc possède toujours un nœud initial, un nœud final, un type et une direction. Il peut décrire, par exemple, les relations, les actions et la propriété parents-enfants. 
 
-![no relational database graphic example](img/bdd_graphic.png)
+![no relational database graphic example](bdd_graphic.png)
 
 #### F. Définissez les notions de clé étrangère et clé primaire.
 
@@ -146,7 +146,7 @@ Il existe plusieurs instructions de jointures différentes. Chaque jointure a de
 
 Le INNER JOIN est une jointure qui permet d’associer les données de deux tables seulement s’il existe une correspondance. Ainsi, la nouvelle table associe les enregistrements (=lignes) que si la clé est identique. En mathématiques on appelle ça une intersection.
 
-![inner join](img/INNER_JOIN.png)
+![inner join](INNER_JOIN.png)
 
 **LEFT JOIN**
 
@@ -158,26 +158,26 @@ LEFT JOIN appartient à la famille des jointures OUTER JOIN. Si un enregistremen
 
 Contrairement à un INNER JOIN, un LEFT JOIN préserve les données de la table de gauche, même en l’absence de correspondance.
 
-![left join](img/LEFT_JOIN.png)
+![left join](LEFT_JOIN.png)
 
 **LEFT JOIN sans intersection**
 
 Cette jointure est un LEFT JOIN auquel on retire les enregistrements qui correspondent à la table de droite. Ainsi, on ne garde que les données de la table de gauche qui n’ont aucune correspondance avec la table de droite.
 
-![left join without intersection](img/LEFT_JOIN_sans-intersection.png)
+![left join without intersection](LEFT_JOIN_sans-intersection.png)
 
 
 **RIGHT JOIN**
 
 Cette requête SQL réalise une jointure en gardant toutes les informations de la table de droite. S’il n’y a pas de correspondance avec la table de gauche, la cellule de l’information manquante contient la valeur NULL. Il s’agit d’un OUTER JOIN aussi.
 
-![right join](img/RIGHT_JOIN.png)
+![right join](RIGHT_JOIN.png)
 
 **RIGHT JOIN sans intersection**
 
 Cette jointure est juste le RIGHT JOIN auquel on retire les enregistrements de la table de Gauche. Ainsi, on ne garde que les lignes de la table de droite qui n’ont aucune correspondance avec la table de gauche.
 
-![right join without intersection](img/RIGHT_JOIN_sans-intersection.png)
+![right join without intersection](RIGHT_JOIN_sans-intersection.png)
 
 **FULL JOIN**
 
@@ -185,7 +185,7 @@ Le FULL JOIN va réaliser une jointure totale entre deux tables. On va prendre l
 
 Cette jointure n'exclut aucune donnée, ni à droite ni à gauche. Elle appartient également à la famille des OUTER JOIN.
 
-![full join](img/FULL_JOIN.png)
+![full join](FULL_JOIN.png)
 
 **NATURAL JOIN**
 
@@ -202,7 +202,7 @@ Késako ? C’est facile : si la table A possède 10 lignes et que la table B po
 ‍
 Ainsi, chaque ligne de la table A est associée à toutes les lignes de la table B.
 
-![cross join](img/CROSS_JOIN.png)
+![cross join](CROSS_JOIN.png)
 
 Ici, on n’utilise pas de clé de jointure. Toutes les lignes sont associées avec celles de l’autre table.
 
