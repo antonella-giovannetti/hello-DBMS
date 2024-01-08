@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vue des Données</title>
+    <meta charset="utf-8">
+    <!-- lien vers css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <main>
+    <h1>Pourcentage d'utilisation de différentes sources d’énergie en 2015</h1>
+    <h2>Utilisation des Sources d'Énergie par Pays</h2>
+    <table border="1">
+        <tr>
+            <th>Nom du Pays</th>
+            <th>Utilisation du Charbon</th>
+            <th>Utilisation du Gaz Naturel</th>
+            <th>Utilisation du Pétrole"</th>
+            <th>Production Hydroélectrique</th>
+            <th>Énergies Renouvelables</th>
+            <th>Énergie Nucléaire"</th>
+        </tr>
+        {% for row in data_country %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <h2>"Utilisation des Sources d'Énergie par Région du Monde</h2>
+    <table border="1">
+        <tr>
+            <th>Nom de la Région</th>
+            <th>Utilisation du Charbon</th>
+            <th>Utilisation du Gaz Naturel</th>
+            <th>Utilisation du Pétrole"</th>
+            <th>Production Hydroélectrique</th>
+            <th>Énergies Renouvelables</th>
+            <th>Énergie Nucléaire"</th>
+        </tr>
+        {% for row in data_world %}
+        <tr>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+            <td>{{ row[4] }}</td>
+            <td>{{ row[5] }}</td>
+            <td>{{ row[6] }}</td>
+            <td>{{ row[7] }}</td>
+
+        </tr>
+        {% endfor %}
+    </table>
+</main>
+</body>
+</html>
